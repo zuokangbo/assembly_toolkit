@@ -17,7 +17,7 @@ class Ui_Dialog(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.listWidget = QtWidgets.QListWidget(Dialog)
         self.listWidget.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.listWidget.setToolTip("")
+        # self.listWidget.setToolTip("")
         self.listWidget.setIconSize(QtCore.QSize(200, 200))
         self.listWidget.setMovement(QtWidgets.QListView.Free)
         self.listWidget.setFlow(QtWidgets.QListView.LeftToRight)
