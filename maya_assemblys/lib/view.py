@@ -17,15 +17,19 @@ class LibUi(QDialog, lib.Ui_Dialog):
         super(LibUi, self).__init__()
         self.setupUi(self)
         self.setWindowTitle('Assembly AssetsLib')
+        self.getLitList()
         self.listWidget.setIconSize(QSize(128,128))
         self.listWidget.setViewMode(QListWidget.IconMode)
+
+    def flow_item(self):
+        self.listWidget.flow()
+
+
+    def getLitList(self):
         for i in range(10):
             lists = QListWidgetItem(self.listWidget)
             lists.setText(str(i))
             lists.setIcon(QIcon('1.png'))
-
-    def flow_item(self):
-        self.listWidget.flow()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
